@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('edit_page') {
+            steps {
+                echo 'Hello World' >> index.html
+            }
+        }
+	stage('test') {
+		cat index.html
+	}
+    }
+}
+
